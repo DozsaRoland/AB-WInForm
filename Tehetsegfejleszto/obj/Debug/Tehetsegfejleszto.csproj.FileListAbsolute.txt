@@ -1,0 +1,12 @@
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\bin\Debug\Database1.mdf
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\bin\Debug\Database1_log.ldf
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\bin\Debug\Tehetsegfejleszto.exe.config
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\bin\Debug\Tehetsegfejleszto.exe
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\bin\Debug\Tehetsegfejleszto.pdb
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\obj\Debug\Tehetsegfejleszto.csproj.AssemblyReference.cache
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\obj\Debug\Tehetsegfejleszto.Form1.resources
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\obj\Debug\Tehetsegfejleszto.Properties.Resources.resources
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\obj\Debug\Tehetsegfejleszto.csproj.GenerateResource.cache
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\obj\Debug\Tehetsegfejleszto.csproj.CoreCompileInputs.cache
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\obj\Debug\Tehetsegfejleszto.exe
+C:\Users\Dózsa Roland\Source\Repos\AB-WInForm\Tehetsegfejleszto\obj\Debug\Tehetsegfejleszto.pdb
