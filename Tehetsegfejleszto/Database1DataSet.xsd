@@ -152,7 +152,17 @@ SELECT foglalkozasId, fejlesztoId, gyermekId, datum, ido, leiras, megnevezes FRO
               <Mapping SourceColumn="leiras" DataSetColumn="leiras" />
               <Mapping SourceColumn="megnevezes" DataSetColumn="megnevezes" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.foglalkozasok" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="AllDatas" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="AllDatas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AllDatas">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        foglalkozasok.*
+FROM            foglalkozasok</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="gyermekekTableAdapter" GeneratorDataComponentClassName="gyermekekTableAdapter" Name="gyermekek" UserDataComponentName="gyermekekTableAdapter">
             <MainSource>
@@ -274,7 +284,7 @@ SELECT szakmaId, nev FROM szakmak WHERE (szakmaId = @szakmaId)</CommandText>
   <xs:element name="Database1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database1DataSet" msprop:Generator_UserDSName="Database1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="fejlesztok" msprop:Generator_TableClassName="fejlesztokDataTable" msprop:Generator_TableVarName="tablefejlesztok" msprop:Generator_TablePropName="fejlesztok" msprop:Generator_RowDeletingName="fejlesztokRowDeleting" msprop:Generator_RowChangingName="fejlesztokRowChanging" msprop:Generator_RowEvHandlerName="fejlesztokRowChangeEventHandler" msprop:Generator_RowDeletedName="fejlesztokRowDeleted" msprop:Generator_UserTableName="fejlesztok" msprop:Generator_RowChangedName="fejlesztokRowChanged" msprop:Generator_RowEvArgName="fejlesztokRowChangeEvent" msprop:Generator_RowClassName="fejlesztokRow">
+        <xs:element name="fejlesztok" msprop:Generator_TableClassName="fejlesztokDataTable" msprop:Generator_TableVarName="tablefejlesztok" msprop:Generator_RowChangedName="fejlesztokRowChanged" msprop:Generator_TablePropName="fejlesztok" msprop:Generator_RowDeletingName="fejlesztokRowDeleting" msprop:Generator_RowChangingName="fejlesztokRowChanging" msprop:Generator_RowEvHandlerName="fejlesztokRowChangeEventHandler" msprop:Generator_RowDeletedName="fejlesztokRowDeleted" msprop:Generator_RowClassName="fejlesztokRow" msprop:Generator_UserTableName="fejlesztok" msprop:Generator_RowEvArgName="fejlesztokRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="fejlesztoId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnfejlesztoId" msprop:Generator_ColumnPropNameInRow="fejlesztoId" msprop:Generator_ColumnPropNameInTable="fejlesztoIdColumn" msprop:Generator_UserColumnName="fejlesztoId" type="xs:int" />
@@ -296,7 +306,7 @@ SELECT szakmaId, nev FROM szakmak WHERE (szakmaId = @szakmaId)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="foglalkozasok" msprop:Generator_TableClassName="foglalkozasokDataTable" msprop:Generator_TableVarName="tablefoglalkozasok" msprop:Generator_TablePropName="foglalkozasok" msprop:Generator_RowDeletingName="foglalkozasokRowDeleting" msprop:Generator_RowChangingName="foglalkozasokRowChanging" msprop:Generator_RowEvHandlerName="foglalkozasokRowChangeEventHandler" msprop:Generator_RowDeletedName="foglalkozasokRowDeleted" msprop:Generator_UserTableName="foglalkozasok" msprop:Generator_RowChangedName="foglalkozasokRowChanged" msprop:Generator_RowEvArgName="foglalkozasokRowChangeEvent" msprop:Generator_RowClassName="foglalkozasokRow">
+        <xs:element name="foglalkozasok" msprop:Generator_TableClassName="foglalkozasokDataTable" msprop:Generator_TableVarName="tablefoglalkozasok" msprop:Generator_RowChangedName="foglalkozasokRowChanged" msprop:Generator_TablePropName="foglalkozasok" msprop:Generator_RowDeletingName="foglalkozasokRowDeleting" msprop:Generator_RowChangingName="foglalkozasokRowChanging" msprop:Generator_RowEvHandlerName="foglalkozasokRowChangeEventHandler" msprop:Generator_RowDeletedName="foglalkozasokRowDeleted" msprop:Generator_RowClassName="foglalkozasokRow" msprop:Generator_UserTableName="foglalkozasok" msprop:Generator_RowEvArgName="foglalkozasokRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="foglalkozasId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnfoglalkozasId" msprop:Generator_ColumnPropNameInRow="foglalkozasId" msprop:Generator_ColumnPropNameInTable="foglalkozasIdColumn" msprop:Generator_UserColumnName="foglalkozasId" type="xs:int" />
@@ -321,7 +331,7 @@ SELECT szakmaId, nev FROM szakmak WHERE (szakmaId = @szakmaId)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="gyermekek" msprop:Generator_TableClassName="gyermekekDataTable" msprop:Generator_TableVarName="tablegyermekek" msprop:Generator_TablePropName="gyermekek" msprop:Generator_RowDeletingName="gyermekekRowDeleting" msprop:Generator_RowChangingName="gyermekekRowChanging" msprop:Generator_RowEvHandlerName="gyermekekRowChangeEventHandler" msprop:Generator_RowDeletedName="gyermekekRowDeleted" msprop:Generator_UserTableName="gyermekek" msprop:Generator_RowChangedName="gyermekekRowChanged" msprop:Generator_RowEvArgName="gyermekekRowChangeEvent" msprop:Generator_RowClassName="gyermekekRow">
+        <xs:element name="gyermekek" msprop:Generator_TableClassName="gyermekekDataTable" msprop:Generator_TableVarName="tablegyermekek" msprop:Generator_RowChangedName="gyermekekRowChanged" msprop:Generator_TablePropName="gyermekek" msprop:Generator_RowDeletingName="gyermekekRowDeleting" msprop:Generator_RowChangingName="gyermekekRowChanging" msprop:Generator_RowEvHandlerName="gyermekekRowChangeEventHandler" msprop:Generator_RowDeletedName="gyermekekRowDeleted" msprop:Generator_RowClassName="gyermekekRow" msprop:Generator_UserTableName="gyermekek" msprop:Generator_RowEvArgName="gyermekekRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="gyermekId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columngyermekId" msprop:Generator_ColumnPropNameInRow="gyermekId" msprop:Generator_ColumnPropNameInTable="gyermekIdColumn" msprop:Generator_UserColumnName="gyermekId" type="xs:int" />
@@ -349,7 +359,7 @@ SELECT szakmaId, nev FROM szakmak WHERE (szakmaId = @szakmaId)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="szakmak" msprop:Generator_TableClassName="szakmakDataTable" msprop:Generator_TableVarName="tableszakmak" msprop:Generator_TablePropName="szakmak" msprop:Generator_RowDeletingName="szakmakRowDeleting" msprop:Generator_RowChangingName="szakmakRowChanging" msprop:Generator_RowEvHandlerName="szakmakRowChangeEventHandler" msprop:Generator_RowDeletedName="szakmakRowDeleted" msprop:Generator_UserTableName="szakmak" msprop:Generator_RowChangedName="szakmakRowChanged" msprop:Generator_RowEvArgName="szakmakRowChangeEvent" msprop:Generator_RowClassName="szakmakRow">
+        <xs:element name="szakmak" msprop:Generator_TableClassName="szakmakDataTable" msprop:Generator_TableVarName="tableszakmak" msprop:Generator_RowChangedName="szakmakRowChanged" msprop:Generator_TablePropName="szakmak" msprop:Generator_RowDeletingName="szakmakRowDeleting" msprop:Generator_RowChangingName="szakmakRowChanging" msprop:Generator_RowEvHandlerName="szakmakRowChangeEventHandler" msprop:Generator_RowDeletedName="szakmakRowDeleted" msprop:Generator_RowClassName="szakmakRow" msprop:Generator_UserTableName="szakmak" msprop:Generator_RowEvArgName="szakmakRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="szakmaId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnszakmaId" msprop:Generator_ColumnPropNameInRow="szakmaId" msprop:Generator_ColumnPropNameInTable="szakmaIdColumn" msprop:Generator_UserColumnName="szakmaId" type="xs:int" />

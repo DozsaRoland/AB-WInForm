@@ -46,14 +46,41 @@ namespace Tehetsegfejleszto
                 folderBrowserDialog1.SelectedPath,
                 $"tehetseg-{DateTime.Now:yyyy-MM-dd_HH-mm}.csv");
             File.WriteAllLines(fileName,
-                database1DataSet.fejlesztok.Select(x => String.Join(";", x.ItemArray))
+                database1DataSet.foglalkozasok.Select(x => String.Join(";", x.ItemArray))
                 );
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            foglalkozasokBindingSource.Filter = $"FejlesztokNeve='{comboBox1.SelectedValue}'";
+        }
+
+        private void allDataToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.foglalkozasokTableAdapter.AllDatas(this.database1DataSet.foglalkozasok);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void allDatasToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.foglalkozasokTableAdapter.AllDatas(this.database1DataSet.foglalkozasok);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }
 }
+
 
